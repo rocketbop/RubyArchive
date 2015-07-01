@@ -47,4 +47,11 @@ p Integer
         .select {|i| palindrome?(i) }
         .first(10)
 
+# Blocks Can Be Closures
 
+def n_times(thing)
+  lambda { |n| thing * n }
+end
+
+p1 = n_times(23)
+puts p1.call 3
